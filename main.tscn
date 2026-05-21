@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://cuc3dy1v8vips"]
+
+[ext_resource type="Texture2D" uid="uid://bxxj207hfr5er" path="res://icon.svg" id="1_ig7tw"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ig7tw"]
+rough = true
+bounce = 0.8
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
+size = Vector2(130, 124)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7tw"]
+size = Vector2(79.30939, 20)
+
+[node name="MAIN" type="Node2D" unique_id=864170617]
+
+[node name="physics prototype" type="Node2D" parent="." unique_id=1247884986]
+visible = false
+position = Vector2(555, 129)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="physics prototype" unique_id=861260413]
+physics_material_override = SubResource("PhysicsMaterial_ig7tw")
+
+[node name="Sprite2D" type="Sprite2D" parent="physics prototype/RigidBody2D" unique_id=1466062231]
+texture = ExtResource("1_ig7tw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="physics prototype/RigidBody2D" unique_id=1181326818]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="physics prototype" unique_id=2035768747]
+position = Vector2(-5, 328)
+scale = Vector2(7.2400002, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="physics prototype/StaticBody2D" unique_id=1915549538]
+position = Vector2(-2, -2)
+texture = ExtResource("1_ig7tw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="physics prototype/StaticBody2D" unique_id=1452149993]
+position = Vector2(-2.4171295, 0)
+rotation = -3.1415925
+scale = Vector2(1.6666666, -6.733333)
+shape = SubResource("RectangleShape2D_ig7tw")
+
+[node name="physics prototype2" type="Node2D" parent="." unique_id=746144782]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="physics prototype2" unique_id=1777652358]
+position = Vector2(555, 129)
+physics_material_override = SubResource("PhysicsMaterial_ig7tw")
+
+[node name="Sprite2D" type="Sprite2D" parent="physics prototype2/RigidBody2D" unique_id=1482530720]
+texture = ExtResource("1_ig7tw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="physics prototype2/RigidBody2D" unique_id=1815676448]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="physics prototype2" unique_id=983470771]
+position = Vector2(550, 457)
+scale = Vector2(7.2400002, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="physics prototype2/StaticBody2D" unique_id=1365713543]
+position = Vector2(-2, -2)
+texture = ExtResource("1_ig7tw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="physics prototype2/StaticBody2D" unique_id=1298998428]
+position = Vector2(-2.4171295, 0)
+rotation = -3.1415925
+scale = Vector2(1.6666666, -6.733333)
+shape = SubResource("RectangleShape2D_ig7tw")

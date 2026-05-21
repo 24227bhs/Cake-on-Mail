@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://217lr78n6e8h"]
+
+[ext_resource type="Texture2D" uid="uid://bxxj207hfr5er" path="res://icon.svg" id="1_2fi3q"]
+[ext_resource type="Script" uid="uid://bf5eydlppewhk" path="res://Scenes/character_body_2d.gd" id="1_osoa5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_osoa5"]
+size = Vector2(131, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2fi3q"]
+size = Vector2(130, 126)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_osoa5"]
+rough = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a11hf"]
+size = Vector2(130, 128)
+
+[node name="physics prototype2" type="Node2D" unique_id=1996408106]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1479525655]
+position = Vector2(904, 259)
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_osoa5")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1472448589]
+scale = Vector2(1.0140887, 1)
+texture = ExtResource("1_2fi3q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1669957696]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_osoa5")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="CharacterBody2D" unique_id=1979959550]
+position = Vector2(-178, 4.999996)
+scale = Vector2(-1.6574755, 0.29588345)
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/StaticBody2D2" unique_id=1916132009]
+texture = ExtResource("1_2fi3q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/StaticBody2D2" unique_id=787084612]
+shape = SubResource("RectangleShape2D_2fi3q")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1798538259]
+position = Vector2(552, 428)
+scale = Vector2(6.9999976, 1)
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=456456283]
+texture = ExtResource("1_2fi3q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=489507627]
+shape = SubResource("RectangleShape2D_2fi3q")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=2058453743]
+position = Vector2(550, 250)
+collision_layer = 4
+collision_mask = 7
+physics_material_override = SubResource("PhysicsMaterial_osoa5")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=611861481]
+texture = ExtResource("1_2fi3q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1356611259]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_a11hf")
