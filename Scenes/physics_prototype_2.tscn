@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bxxj207hfr5er" path="res://icon.svg" id="1_2fi3q"]
 [ext_resource type="Script" uid="uid://bf5eydlppewhk" path="res://Scenes/character_body_2d.gd" id="1_osoa5"]
+[ext_resource type="Script" uid="uid://c1d3vm1015c6l" path="res://Scenes/slants.gd" id="3_a11hf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_osoa5"]
 size = Vector2(131, 128)
@@ -11,6 +12,7 @@ size = Vector2(130, 126)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_osoa5"]
 rough = true
+bounce = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a11hf"]
 size = Vector2(130, 128)
@@ -18,9 +20,10 @@ size = Vector2(130, 128)
 [node name="physics prototype2" type="Node2D" unique_id=1996408106]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1479525655]
-position = Vector2(904, 259)
+position = Vector2(165, 283)
 collision_layer = 2
-collision_mask = 3
+collision_mask = 7
+platform_on_leave = 2
 script = ExtResource("1_osoa5")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1472448589]
@@ -32,9 +35,10 @@ position = Vector2(-1.5, 0)
 shape = SubResource("RectangleShape2D_osoa5")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="CharacterBody2D" unique_id=1979959550]
-position = Vector2(-178, 4.999996)
-scale = Vector2(-1.6574755, 0.29588345)
+position = Vector2(192, 22.999996)
+scale = Vector2(-0.9646161, 0.33326992)
 collision_mask = 7
+script = ExtResource("3_a11hf")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/StaticBody2D2" unique_id=1916132009]
 texture = ExtResource("1_2fi3q")
@@ -54,10 +58,12 @@ texture = ExtResource("1_2fi3q")
 shape = SubResource("RectangleShape2D_2fi3q")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=2058453743]
-position = Vector2(550, 250)
+position = Vector2(357, 159)
 collision_layer = 4
 collision_mask = 7
+mass = 0.5
 physics_material_override = SubResource("PhysicsMaterial_osoa5")
+gravity_scale = 0.5
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=611861481]
 texture = ExtResource("1_2fi3q")
