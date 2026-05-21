@@ -3,19 +3,26 @@
 [ext_resource type="Texture2D" uid="uid://bxxj207hfr5er" path="res://icon.svg" id="1_2fi3q"]
 [ext_resource type="Script" uid="uid://bf5eydlppewhk" path="res://Scenes/character_body_2d.gd" id="1_osoa5"]
 [ext_resource type="Script" uid="uid://c1d3vm1015c6l" path="res://Scenes/slants.gd" id="3_a11hf"]
+[ext_resource type="Script" uid="uid://cw1hnpdkhpc2n" path="res://Scenes/floor.gd" id="4_7y40j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_osoa5"]
 size = Vector2(131, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2fi3q"]
-size = Vector2(130, 126)
+size = Vector2(132.5223, 126)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_osoa5"]
 rough = true
 bounce = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a11hf"]
-size = Vector2(130, 128)
+size = Vector2(135, 130)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_406xi"]
+size = Vector2(3049.25, 211.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7y40j"]
+size = Vector2(160, 204)
 
 [node name="physics prototype2" type="Node2D" unique_id=1996408106]
 
@@ -37,6 +44,7 @@ shape = SubResource("RectangleShape2D_osoa5")
 [node name="StaticBody2D2" type="StaticBody2D" parent="CharacterBody2D" unique_id=1979959550]
 position = Vector2(192, 22.999996)
 scale = Vector2(-0.9646161, 0.33326992)
+collision_layer = 2
 collision_mask = 7
 script = ExtResource("3_a11hf")
 
@@ -58,12 +66,11 @@ texture = ExtResource("1_2fi3q")
 shape = SubResource("RectangleShape2D_2fi3q")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=2058453743]
-position = Vector2(357, 159)
+position = Vector2(361, 176)
 collision_layer = 4
 collision_mask = 7
-mass = 0.5
+mass = 0.9
 physics_material_override = SubResource("PhysicsMaterial_osoa5")
-gravity_scale = 0.5
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=611861481]
 texture = ExtResource("1_2fi3q")
@@ -71,3 +78,34 @@ texture = ExtResource("1_2fi3q")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1356611259]
 position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_a11hf")
+
+[node name="Hitbox" type="Area2D" parent="RigidBody2D" unique_id=305197435]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/Hitbox" unique_id=174736133]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_a11hf")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1765842729]
+position = Vector2(582, 302)
+scale = Vector2(-1.1688693, 1)
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=387183461]
+texture = ExtResource("1_2fi3q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=544576030]
+shape = SubResource("RectangleShape2D_2fi3q")
+
+[node name="Floor" type="Area2D" parent="." unique_id=1500450302]
+position = Vector2(554, 456)
+script = ExtResource("4_7y40j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1945440036]
+position = Vector2(7, 16)
+shape = SubResource("RectangleShape2D_406xi")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Floor" unique_id=927436977]
+position = Vector2(28, -124)
+shape = SubResource("RectangleShape2D_7y40j")
+
+[connection signal="area_entered" from="Floor" to="Floor" method="_on_area_entered"]
