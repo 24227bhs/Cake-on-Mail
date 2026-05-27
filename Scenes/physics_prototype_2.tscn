@@ -8,8 +8,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_osoa5"]
 size = Vector2(131, 128)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2fi3q"]
-size = Vector2(132.5223, 126)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yjjqr"]
+size = Vector2(109, 20)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_osoa5"]
 friction = 0.11
@@ -20,7 +20,7 @@ bounce = 3.0
 size = Vector2(135, 130)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_406xi"]
-size = Vector2(3049.25, 211.5)
+size = Vector2(4191, 222.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7y40j"]
 size = Vector2(160, 204)
@@ -30,6 +30,9 @@ size = Vector2(22.268951, 540.12225)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gfbes"]
 size = Vector2(193, 135.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2fi3q"]
+size = Vector2(132.5223, 126)
 
 [node name="physics prototype2" type="Node2D" unique_id=1996408106]
 
@@ -48,22 +51,29 @@ texture = ExtResource("1_2fi3q")
 position = Vector2(-1.5, 0)
 shape = SubResource("RectangleShape2D_osoa5")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="CharacterBody2D" unique_id=1979959550]
-position = Vector2(196, 32.999996)
-rotation = -3.1415927
-scale = Vector2(0.9646161, -0.33326992)
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=628346084]
+zoom = Vector2(0.5, 0.5)
+
+[node name="Node2D" type="Node2D" parent="CharacterBody2D" unique_id=1839464397]
+position = Vector2(128, 1)
+
+[node name="RigidBody2D" type="CharacterBody2D" parent="CharacterBody2D/Node2D" unique_id=1865604853]
+position = Vector2(-45, -1)
 collision_layer = 2
 collision_mask = 7
 script = ExtResource("3_a11hf")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/StaticBody2D2" unique_id=1916132009]
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/Node2D/RigidBody2D" unique_id=211159696]
+position = Vector2(45, 0)
+scale = Vector2(0.9028501, 0.16201313)
 texture = ExtResource("1_2fi3q")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/StaticBody2D2" unique_id=787084612]
-shape = SubResource("RectangleShape2D_2fi3q")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Node2D/RigidBody2D" unique_id=1290305156]
+position = Vector2(44.5, 0)
+shape = SubResource("RectangleShape2D_yjjqr")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=628346084]
-zoom = Vector2(0.5, 0.5)
+[node name="Node2D" type="Node2D" parent="CharacterBody2D/Node2D/RigidBody2D" unique_id=1009536488]
+position = Vector2(347, 0)
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=2058453743]
 position = Vector2(361, 176)
@@ -73,6 +83,9 @@ collision_mask = 7
 mass = 0.9
 physics_material_override = SubResource("PhysicsMaterial_osoa5")
 gravity_scale = 0.377
+max_contacts_reported = 10
+linear_damp_mode = 1
+linear_damp = 0.83
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=611861481]
 texture = ExtResource("1_2fi3q")
@@ -92,15 +105,15 @@ position = Vector2(554, 456)
 script = ExtResource("4_7y40j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1945440036]
-position = Vector2(7, 16)
+position = Vector2(3.5, 10.375)
 shape = SubResource("RectangleShape2D_406xi")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Floor" unique_id=927436977]
-position = Vector2(28, -124)
+position = Vector2(40, 241)
 shape = SubResource("RectangleShape2D_7y40j")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Floor" unique_id=1884216445]
-position = Vector2(379, -292)
+position = Vector2(788, 259)
 scale = Vector2(8.397343, 0.24809201)
 shape = SubResource("RectangleShape2D_4qivd")
 
@@ -117,14 +130,16 @@ scale = Vector2(1.1688693, -1)
 collision_mask = 7
 
 [node name="Sprite2D" type="Sprite2D" parent="level/StaticBody2D2" unique_id=387183461]
+position = Vector2(449.152, 412.00006)
 texture = ExtResource("1_2fi3q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="level/StaticBody2D2" unique_id=544576030]
+position = Vector2(-230.13696, 431)
 shape = SubResource("RectangleShape2D_2fi3q")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="level" unique_id=1798538259]
 position = Vector2(552, 428)
-scale = Vector2(6.9999976, 1)
+scale = Vector2(31.280651, -1.0765285)
 collision_mask = 7
 
 [node name="Sprite2D" type="Sprite2D" parent="level/StaticBody2D" unique_id=456456283]
@@ -150,9 +165,24 @@ scale = Vector2(1.3662553, 1)
 collision_mask = 7
 
 [node name="Sprite2D" type="Sprite2D" parent="level/StaticBody2D4" unique_id=1942295377]
+position = Vector2(101.73794, 570)
 texture = ExtResource("1_2fi3q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="level/StaticBody2D4" unique_id=2022317745]
+position = Vector2(-472.09332, 534)
+shape = SubResource("RectangleShape2D_2fi3q")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1979959550]
+position = Vector2(-149.99997, 51)
+rotation = 3.1415925
+scale = Vector2(0.9646161, -0.33326992)
+collision_layer = 2
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=1916132009]
+texture = ExtResource("1_2fi3q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=787084612]
 shape = SubResource("RectangleShape2D_2fi3q")
 
 [connection signal="area_entered" from="Floor" to="Floor" method="_on_area_entered"]
