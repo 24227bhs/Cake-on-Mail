@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://5xn5hk1m0qmi"]
+
+[ext_resource type="Script" uid="uid://bf5eydlppewhk" path="res://script/character_body_2d.gd" id="1_6t5aa"]
+[ext_resource type="Texture2D" uid="uid://bxxj207hfr5er" path="res://icon.svg" id="2_vgqql"]
+[ext_resource type="Script" uid="uid://c1d3vm1015c6l" path="res://script/slants.gd" id="3_fkybt"]
+[ext_resource type="Script" uid="uid://cw1hnpdkhpc2n" path="res://script/floor.gd" id="4_vgqql"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_osoa5"]
+size = Vector2(131, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2fi3q"]
+size = Vector2(132.5223, 126)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkybt"]
+size = Vector2(121, 20)
+
+[node name="player" type="CharacterBody2D" unique_id=1502902567]
+collision_layer = 2
+collision_mask = 7
+platform_on_leave = 2
+script = ExtResource("1_6t5aa")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=74074667]
+modulate = Color(0.1254902, 0.42352942, 0, 1)
+scale = Vector2(1.0140887, 1)
+texture = ExtResource("2_vgqql")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1653726206]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_osoa5")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1239806125]
+zoom = Vector2(0.5, 0.5)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1130717556]
+position = Vector2(155.99997, 16)
+rotation = 3.141924
+scale = Vector2(0.9646161, -0.33326992)
+collision_layer = 2
+collision_mask = 7
+script = ExtResource("3_fkybt")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=570195077]
+texture = ExtResource("2_vgqql")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1931068373]
+shape = SubResource("RectangleShape2D_2fi3q")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=546551559]
+script = ExtResource("4_vgqql")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=360597139]
+position = Vector2(-2, -59)
+shape = SubResource("RectangleShape2D_fkybt")

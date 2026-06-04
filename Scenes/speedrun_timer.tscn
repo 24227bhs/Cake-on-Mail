@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cxnc5p4tw3bur"]
+
+[ext_resource type="Script" uid="uid://bjyamg1doepfy" path="res://script/speedrun_timer.gd" id="1_pyk7o"]
+
+[node name="speedrun timer" type="CanvasLayer" unique_id=383710765]
+script = ExtResource("1_pyk7o")
+
+[node name="Label" type="Label" parent="." unique_id=1443479157]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Timer" type="Timer" parent="." unique_id=2135260511]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
