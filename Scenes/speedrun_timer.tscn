@@ -8,6 +8,7 @@ script = ExtResource("1_pyk7o")
 [node name="Label" type="Label" parent="." unique_id=1443479157]
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_font_sizes/font_size = 32
 
 [node name="Timer" type="Timer" parent="." unique_id=2135260511]
 autostart = true
