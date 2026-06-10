@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://bxxj207hfr5er" path="res://icon.svg" id="1_2fi3q"]
 [ext_resource type="PackedScene" uid="uid://5xn5hk1m0qmi" path="res://Scenes/player.tscn" id="1_7y40j"]
-[ext_resource type="Script" uid="uid://dg0g7hj1pd8yw" path="res://script/restart.gd" id="1_gfbes"]
 [ext_resource type="Script" uid="uid://cw1hnpdkhpc2n" path="res://script/floor.gd" id="4_7y40j"]
 [ext_resource type="PackedScene" uid="uid://b0vh7v10mcf1t" path="res://Scenes/the_cake.tscn" id="4_406xi"]
 [ext_resource type="PackedScene" uid="uid://cxnc5p4tw3bur" path="res://Scenes/speedrun_timer.tscn" id="5_406xi"]
@@ -36,7 +35,6 @@ size = Vector2(132.5223, 126)
 size = Vector2(128, 126)
 
 [node name="physics prototype2" type="Node2D" unique_id=1996408106]
-script = ExtResource("1_gfbes")
 
 [node name="player" parent="." unique_id=1502902567 instance=ExtResource("1_7y40j")]
 position = Vector2(165, 283)
