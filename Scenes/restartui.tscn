@@ -1,12 +1,22 @@
 [gd_scene format=3 uid="uid://dk25mbc6if0uj"]
 
-[node name="CanvasLayer" type="CanvasLayer" unique_id=362119466]
+[ext_resource type="Script" uid="uid://1kteabypc67c" path="res://script/restartui.gd" id="1_x7oyt"]
+
+[node name="restartui" type="CanvasLayer" unique_id=362119466]
+script = ExtResource("1_x7oyt")
 
 [node name="Control" type="Control" parent="." unique_id=105284064]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1972558146]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(29.000006, 16.84)
+color = Color(0, 0.03137255, 0.12156863, 1)
 
 [node name="Control2" type="Control" parent="." unique_id=1277442980]
 layout_mode = 3
@@ -16,14 +26,22 @@ offset_bottom = 40.0
 
 [node name="MarginContainer" type="MarginContainer" parent="Control2" unique_id=710013750]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 195.0
+offset_top = 169.0
+offset_right = 963.0
+offset_bottom = 408.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control2/MarginContainer" unique_id=289175149]
 layout_mode = 2
+alignment = 1
 
-[node name="Button" type="Button" parent="Control2/MarginContainer/VBoxContainer" unique_id=1957457262]
+[node name="Restart" type="Button" parent="Control2/MarginContainer/VBoxContainer" unique_id=1957457262]
 layout_mode = 2
+text = "Restart"
 
-[node name="Button2" type="Button" parent="Control2/MarginContainer/VBoxContainer" unique_id=1822101005]
+[node name="Menu" type="Button" parent="Control2/MarginContainer/VBoxContainer" unique_id=1822101005]
 layout_mode = 2
+text = "Menu"
+
+[connection signal="pressed" from="Control2/MarginContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Control2/MarginContainer/VBoxContainer/Menu" to="." method="_on_menu_pressed"]
