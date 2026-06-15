@@ -126,8 +126,8 @@ modification_stack = SubResource("SkeletonModificationStack2D_tp1x8")
 
 [node name="Bone-0" type="Bone2D" parent="Skeleton2D" unique_id=1034061917]
 position = Vector2(25.442385, 25.442387)
-rotation = 0.09654821
-scale = Vector2(0.99999946, 1)
+rotation = 0.09654824
+scale = Vector2(0.9999991, 1)
 rest = Transform2D(0.99534285, 0.09639823, -0.09639823, 0.99534285, 25.442389, 25.442389)
 auto_calculate_length_and_angle = false
 length = 65.0
@@ -140,7 +140,7 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-1" type="Bone2D" parent="Skeleton2D" unique_id=1881038024]
 position = Vector2(29.247149, 64.727806)
-rotation = -0.020939289
+rotation = -0.020939292
 scale = Vector2(0.9999999, 1)
 rest = Transform2D(0.9997808, -0.020937756, 0.020937756, 0.9997808, 29.24715, 64.727806)
 auto_calculate_length_and_angle = false
@@ -154,8 +154,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-2" type="Bone2D" parent="Skeleton2D" unique_id=459597857]
 position = Vector2(25.346638, 103.46286)
-rotation = -0.7957608
-scale = Vector2(0.99999976, 0.9999997)
+rotation = -0.795761
+scale = Vector2(0.9999996, 0.9999994)
 rest = Transform2D(0.6997416, -0.714396, 0.714396, 0.6997416, 25.346642, 103.46285)
 auto_calculate_length_and_angle = false
 length = 65.0
@@ -169,7 +169,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-3" type="Bone2D" parent="Skeleton2D" unique_id=1751986153]
 position = Vector2(64.7278, 29.24715)
 rotation = 1.5917355
-scale = Vector2(1, 0.9999996)
+scale = Vector2(1, 0.99999934)
 rest = Transform2D(-0.020937625, 0.9997808, -0.9997808, -0.020937625, 64.727806, 29.24715)
 auto_calculate_length_and_angle = false
 length = 65.0
@@ -183,7 +183,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-4" type="Bone2D" parent="Skeleton2D" unique_id=855139009]
 position = Vector2(63.999996, 64)
 rotation = 1.5502862
-scale = Vector2(0.9999999, 0.9999995)
+scale = Vector2(0.9999999, 0.9999992)
 rest = Transform2D(0.020508716, 0.99978966, -0.99978966, 0.020508716, 64, 64)
 auto_calculate_length_and_angle = false
 length = 65.0
@@ -197,7 +197,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-5" type="Bone2D" parent="Skeleton2D" unique_id=1204492326]
 position = Vector2(64.73339, 99.75272)
 rotation = -1.5913064
-scale = Vector2(0.9999999, 0.9999995)
+scale = Vector2(0.9999999, 0.9999992)
 rest = Transform2D(-0.020508682, -0.99978966, 0.99978966, -0.020508682, 64.73339, 99.75273)
 auto_calculate_length_and_angle = false
 length = 65.0
@@ -211,7 +211,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-6" type="Bone2D" parent="Skeleton2D" unique_id=620638089]
 position = Vector2(103.46285, 25.346642)
 rotation = 2.366557
-scale = Vector2(1, 0.9999999)
+scale = Vector2(1, 0.9999998)
 rest = Transform2D(-0.714396, 0.6997416, -0.6997416, -0.714396, 103.46285, 25.346642)
 auto_calculate_length_and_angle = false
 length = 65.0
@@ -225,7 +225,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-7" type="Bone2D" parent="Skeleton2D" unique_id=633666174]
 position = Vector2(99.752716, 64.73338)
 rotation = -1.4768759
-scale = Vector2(1, 0.99999964)
+scale = Vector2(1, 0.9999994)
 rest = Transform2D(0.09378241, -0.9955927, 0.9955927, 0.09378241, 99.75273, 64.73339)
 auto_calculate_length_and_angle = false
 length = 65.0
@@ -239,7 +239,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-8" type="Bone2D" parent="Skeleton2D" unique_id=1909108086]
 position = Vector2(103.55761, 103.55761)
 rotation = -3.0439017
-scale = Vector2(0.9999996, 1)
+scale = Vector2(0.9999994, 1)
 rest = Transform2D(-0.99523205, -0.09753566, 0.09753566, -0.99523205, 103.55761, 103.55761)
 auto_calculate_length_and_angle = false
 length = 65.0
@@ -822,7 +822,7 @@ angular_limit_lower = 1.0
 angular_limit_upper = 1.0
 
 [node name="hitbox" type="Area2D" parent="." unique_id=1475859246 groups=["cake"]]
-position = Vector2(2.7118592, 227.06424)
+position = Vector2(34.161865, 203.47403)
 scale = Vector2(0.99999994, 1)
 script = ExtResource("3_o6jgw")
 

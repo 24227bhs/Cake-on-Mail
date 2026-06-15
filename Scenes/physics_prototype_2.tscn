@@ -17,7 +17,7 @@ bounce = 3.0
 size = Vector2(135, 130)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_406xi"]
-size = Vector2(4191, 182.75)
+size = Vector2(8039.541, 182.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7y40j"]
 size = Vector2(160, 204)
@@ -38,7 +38,7 @@ size = Vector2(128, 126)
 size = Vector2(125, 124)
 
 [sub_resource type="Animation" id="Animation_uu4vj"]
-length = 0.001
+length = 5.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -58,10 +58,10 @@ tracks/1/path = NodePath(".:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.001, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(1, 1)]
+"values": [Vector2(1e-05, 1e-05), Vector2(4, 1), Vector2(4, 4)]
 }
 
 [sub_resource type="Animation" id="Animation_n2vs4"]
@@ -97,6 +97,82 @@ tracks/1/keys = {
 _data = {
 &"RESET": SubResource("Animation_uu4vj"),
 &"test": SubResource("Animation_n2vs4")
+}
+
+[sub_resource type="Animation" id="Animation_gfbes"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_yjjqr"]
+resource_name = "piston"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(4, 1), Vector2(4, 4), Vector2(4, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j1o2c"]
+_data = {
+&"RESET": SubResource("Animation_gfbes"),
+&"piston": SubResource("Animation_yjjqr")
+}
+
+[sub_resource type="Animation" id="Animation_j1o2c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_adb80"]
+resource_name = "spinner"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.2831855]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7ahm4"]
+_data = {
+&"RESET": SubResource("Animation_j1o2c"),
+&"spinner": SubResource("Animation_adb80")
 }
 
 [node name="physics prototype2" type="Node2D" unique_id=1996408106]
@@ -135,7 +211,7 @@ scale = Vector2(1.0038939, 1)
 script = ExtResource("4_7y40j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1945440036]
-position = Vector2(-48, -16)
+position = Vector2(1876.2705, -16)
 shape = SubResource("RectangleShape2D_406xi")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Floor" unique_id=927436977]
@@ -169,7 +245,7 @@ shape = SubResource("RectangleShape2D_2fi3q")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="level" unique_id=1798538259]
 position = Vector2(552, 428)
-scale = Vector2(31.280651, -1.0765285)
+scale = Vector2(88.84065, -1.0765285)
 collision_mask = 7
 
 [node name="Sprite2D" type="Sprite2D" parent="level/StaticBody2D" unique_id=456456283]
@@ -203,7 +279,7 @@ position = Vector2(2.1957703, -3)
 shape = SubResource("RectangleShape2D_2fi3q")
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="level" unique_id=618401290]
-position = Vector2(2487.9998, 8)
+position = Vector2(6179, -213)
 rotation = 3.1415927
 scale = Vector2(1.0364186, -11.591385)
 collision_mask = 7
@@ -227,7 +303,7 @@ shape = SubResource("RectangleShape2D_2fi3q")
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="level" unique_id=1991847733]
 position = Vector2(746, -2043.9999)
-scale = Vector2(76.91015, 3.8911943)
+scale = Vector2(185.29143, 3.2539828)
 collision_mask = 7
 
 [node name="Sprite2D" type="Sprite2D" parent="level/StaticBody2D7" unique_id=1619593002]
@@ -236,14 +312,28 @@ texture = ExtResource("1_2fi3q")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="level/StaticBody2D7" unique_id=1333583794]
 shape = SubResource("RectangleShape2D_2fi3q")
 
+[node name="StaticBody2D8" type="StaticBody2D" parent="level" unique_id=2012633682]
+position = Vector2(3749, 40)
+rotation = 3.1415927
+scale = Vector2(20, -4)
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="level/StaticBody2D8" unique_id=829863083]
+position = Vector2(-1.7111206, -6)
+texture = ExtResource("1_2fi3q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="level/StaticBody2D8" unique_id=1969336317]
+position = Vector2(-0.85553646, -10.999992)
+shape = SubResource("RectangleShape2D_2fi3q")
+
 [node name="the cake" parent="." unique_id=127461938 instance=ExtResource("4_406xi")]
-position = Vector2(265, 74.00001)
+position = Vector2(268, 2)
 
 [node name="speedrun timer" parent="." unique_id=383710765 instance=ExtResource("5_406xi")]
 
 [node name="winarea" type="Area2D" parent="." unique_id=1425614094]
 z_index = 1
-position = Vector2(2284, 91.999985)
+position = Vector2(5975, -129)
 scale = Vector2(0.7420397, 5.0855827)
 script = ExtResource("6_4qivd")
 
@@ -260,6 +350,7 @@ visible = false
 
 [node name="AnimatableBody2D" type="AnimatableBody2D" parent="." unique_id=1513985293]
 position = Vector2(1518, 299)
+scale = Vector2(1e-05, 1e-05)
 
 [node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D" unique_id=1514987435]
 texture = ExtResource("1_2fi3q")
@@ -271,6 +362,36 @@ shape = SubResource("RectangleShape2D_j1o2c")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody2D" unique_id=336372369]
 libraries/ = SubResource("AnimationLibrary_adb80")
 autoplay = &"test"
+
+[node name="AnimatableBody2D2" type="AnimatableBody2D" parent="." unique_id=349745989]
+position = Vector2(2176, 282)
+scale = Vector2(4, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D2" unique_id=399660937]
+texture = ExtResource("1_2fi3q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D2" unique_id=936905517]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_j1o2c")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody2D2" unique_id=177432262]
+libraries/ = SubResource("AnimationLibrary_j1o2c")
+autoplay = &"piston"
+
+[node name="AnimatableBody2D3" type="AnimatableBody2D" parent="." unique_id=2008468615]
+position = Vector2(2902, -492)
+scale = Vector2(6, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D3" unique_id=937468769]
+texture = ExtResource("1_2fi3q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D3" unique_id=1106941600]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_j1o2c")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody2D3" unique_id=217761833]
+libraries/ = SubResource("AnimationLibrary_7ahm4")
+autoplay = &"spinner"
 
 [connection signal="area_entered" from="Floor" to="Floor" method="_on_area_entered"]
 [connection signal="area_entered" from="winarea" to="winarea" method="_on_area_entered"]
