@@ -46,12 +46,12 @@ text = "QUIT"
 
 [node name="Label" type="Label" parent="." unique_id=1457028212]
 layout_mode = 0
-offset_left = 254.0
-offset_top = 13.0
-offset_right = 933.0
-offset_bottom = 232.0
-theme_override_font_sizes/font_size = 160
-text = "GAME!!!!!"
+offset_left = 143.0
+offset_top = 1.0
+offset_right = 1035.0
+offset_bottom = 220.0
+theme_override_font_sizes/font_size = 140
+text = "Cake On Mail"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=2004459074]
 layout_mode = 0
