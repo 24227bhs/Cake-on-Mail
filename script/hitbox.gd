@@ -3,7 +3,7 @@ extends Area2D
 var cake_node
 
 func _ready() -> void:
-	cake_node = get_parent().get_child(5)
+	cake_node = get_parent().get_child(2)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

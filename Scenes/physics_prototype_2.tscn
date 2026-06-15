@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b0vh7v10mcf1t" path="res://Scenes/the_cake.tscn" id="4_406xi"]
 [ext_resource type="PackedScene" uid="uid://cxnc5p4tw3bur" path="res://Scenes/speedrun_timer.tscn" id="5_406xi"]
 [ext_resource type="Script" uid="uid://bhulrwaxult6u" path="res://script/win.gd" id="6_4qivd"]
+[ext_resource type="Script" uid="uid://dhd807mmyyl15" path="res://script/jump_pad.gd" id="8_j1o2c"]
 [ext_resource type="PackedScene" uid="uid://dk25mbc6if0uj" path="res://Scenes/restartui.tscn" id="8_yjjqr"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_osoa5"]
@@ -16,17 +17,8 @@ bounce = 3.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a11hf"]
 size = Vector2(135, 130)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_406xi"]
-size = Vector2(8039.541, 182.75)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7y40j"]
-size = Vector2(160, 204)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4qivd"]
-size = Vector2(22.268951, 540.12225)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gfbes"]
-size = Vector2(193, 135.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n2vs4"]
+size = Vector2(3292.1812, 798.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2fi3q"]
 size = Vector2(132.5223, 126)
@@ -175,10 +167,13 @@ _data = {
 &"spinner": SubResource("Animation_adb80")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uu4vj"]
+size = Vector2(1362.2593, 165)
+
 [node name="physics prototype2" type="Node2D" unique_id=1996408106]
 
 [node name="player" parent="." unique_id=1502902567 instance=ExtResource("1_7y40j")]
-position = Vector2(165, 283)
+position = Vector2(0, 252)
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=2058453743]
 position = Vector2(-2368, -49)
@@ -206,26 +201,19 @@ position = Vector2(-1, 1)
 shape = SubResource("RectangleShape2D_a11hf")
 
 [node name="Floor" type="Area2D" parent="." unique_id=1500450302]
-position = Vector2(554, 456)
+position = Vector2(8362.999, 2118)
 scale = Vector2(1.0038939, 1)
 script = ExtResource("4_7y40j")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1945440036]
-position = Vector2(1876.2705, -16)
-shape = SubResource("RectangleShape2D_406xi")
+[node name="Sprite2D" type="Sprite2D" parent="Floor" unique_id=2145991871]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(859.65356, -14.000027)
+scale = Vector2(-28.302505, 0.6134542)
+texture = ExtResource("1_2fi3q")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Floor" unique_id=927436977]
-position = Vector2(30, -134)
-shape = SubResource("RectangleShape2D_7y40j")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Floor" unique_id=1884216445]
-position = Vector2(385, -292)
-scale = Vector2(8.397343, 0.24809201)
-shape = SubResource("RectangleShape2D_4qivd")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Floor" unique_id=900139732]
-position = Vector2(-1069.8342, -267)
-shape = SubResource("RectangleShape2D_gfbes")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1265474151]
+position = Vector2(946.3164, 350)
+shape = SubResource("RectangleShape2D_n2vs4")
 
 [node name="level" type="Node2D" parent="." unique_id=550272294]
 
@@ -279,9 +267,9 @@ position = Vector2(2.1957703, -3)
 shape = SubResource("RectangleShape2D_2fi3q")
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="level" unique_id=618401290]
-position = Vector2(6179, -213)
+position = Vector2(12335.001, -78)
 rotation = 3.1415927
-scale = Vector2(1.0364186, -11.591385)
+scale = Vector2(1.0364186, -31.791386)
 collision_mask = 7
 
 [node name="Sprite2D" type="Sprite2D" parent="level/StaticBody2D5" unique_id=1451596599]
@@ -292,7 +280,7 @@ shape = SubResource("RectangleShape2D_2fi3q")
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="level" unique_id=1300232426]
 position = Vector2(-1476, 94)
-scale = Vector2(-2.8814747, 13.615894)
+scale = Vector2(-2.8814747, 35.615894)
 collision_mask = 7
 
 [node name="Sprite2D" type="Sprite2D" parent="level/StaticBody2D6" unique_id=1696964339]
@@ -326,14 +314,81 @@ texture = ExtResource("1_2fi3q")
 position = Vector2(-0.85553646, -10.999992)
 shape = SubResource("RectangleShape2D_2fi3q")
 
+[node name="StaticBody2D9" type="StaticBody2D" parent="level" unique_id=909235079]
+position = Vector2(6275.0005, 1352)
+scale = Vector2(-2.8814747, 13.615894)
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="level/StaticBody2D9" unique_id=958735768]
+texture = ExtResource("1_2fi3q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="level/StaticBody2D9" unique_id=688730384]
+shape = SubResource("RectangleShape2D_2fi3q")
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="level" unique_id=461003938]
+position = Vector2(10986, 1291)
+scale = Vector2(-2.8814747, 13.615894)
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="level/StaticBody2D10" unique_id=358680518]
+texture = ExtResource("1_2fi3q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="level/StaticBody2D10" unique_id=1018869855]
+shape = SubResource("RectangleShape2D_2fi3q")
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="level" unique_id=36409805]
+position = Vector2(8708, 2458)
+scale = Vector2(-46.632442, 5.118173)
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="level/StaticBody2D11" unique_id=171613388]
+texture = ExtResource("1_2fi3q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="level/StaticBody2D11" unique_id=792722811]
+shape = SubResource("RectangleShape2D_2fi3q")
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="level" unique_id=1125546248]
+position = Vector2(11614.001, 575.99994)
+scale = Vector2(-12.441475, 2.3358917)
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="level/StaticBody2D12" unique_id=601814983]
+texture = ExtResource("1_2fi3q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="level/StaticBody2D12" unique_id=259206995]
+shape = SubResource("RectangleShape2D_2fi3q")
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="level" unique_id=94229855]
+position = Vector2(6901, 1279.0001)
+scale = Vector2(13.129295, -14.620006)
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="level/StaticBody2D13" unique_id=1726058577]
+texture = ExtResource("1_2fi3q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="level/StaticBody2D13" unique_id=1941625940]
+shape = SubResource("RectangleShape2D_2fi3q")
+
+[node name="StaticBody2D14" type="StaticBody2D" parent="level" unique_id=317713346]
+position = Vector2(8783, 1292)
+rotation = -0.49224085
+scale = Vector2(4.0259824, 14.433266)
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="level/StaticBody2D14" unique_id=956958128]
+texture = ExtResource("1_2fi3q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="level/StaticBody2D14" unique_id=885550211]
+shape = SubResource("RectangleShape2D_2fi3q")
+
 [node name="the cake" parent="." unique_id=127461938 instance=ExtResource("4_406xi")]
-position = Vector2(268, 2)
+position = Vector2(113.00001, 60.00001)
 
 [node name="speedrun timer" parent="." unique_id=383710765 instance=ExtResource("5_406xi")]
 
 [node name="winarea" type="Area2D" parent="." unique_id=1425614094]
 z_index = 1
-position = Vector2(5975, -129)
+position = Vector2(12131, 5.9999847)
 scale = Vector2(0.7420397, 5.0855827)
 script = ExtResource("6_4qivd")
 
@@ -343,6 +398,7 @@ shape = SubResource("RectangleShape2D_yjjqr")
 
 [node name="Sprite2D" type="Sprite2D" parent="winarea" unique_id=204037901]
 modulate = Color(1, 0, 1, 1)
+position = Vector2(9.433457, 1.37644)
 texture = ExtResource("1_2fi3q")
 
 [node name="restartui" parent="." unique_id=362119466 instance=ExtResource("8_yjjqr")]
@@ -393,5 +449,128 @@ shape = SubResource("RectangleShape2D_j1o2c")
 libraries/ = SubResource("AnimationLibrary_7ahm4")
 autoplay = &"spinner"
 
+[node name="JumpPad" type="StaticBody2D" parent="." unique_id=2027388112]
+position = Vector2(9643, 1945)
+scale = Vector2(0.71200776, 0.32358876)
+script = ExtResource("8_j1o2c")
+
+[node name="Sprite2D" type="Sprite2D" parent="JumpPad" unique_id=273091545]
+scale = Vector2(10.669208, 1.4347237)
+texture = ExtResource("1_2fi3q")
+
+[node name="Area2D" type="Area2D" parent="JumpPad" unique_id=1451139607]
+collision_layer = 7
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JumpPad/Area2D" unique_id=833501407]
+position = Vector2(-12.936523, 2)
+scale = Vector2(1.0674391, 1)
+shape = SubResource("RectangleShape2D_uu4vj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JumpPad" unique_id=1142012268]
+position = Vector2(-0.93652344, 11.5)
+scale = Vector2(1.0674391, 1)
+shape = SubResource("RectangleShape2D_uu4vj")
+
+[node name="JumpPad2" type="StaticBody2D" parent="." unique_id=1806292761]
+position = Vector2(10250, 1422.9999)
+scale = Vector2(0.27283427, 0.7673653)
+script = ExtResource("8_j1o2c")
+
+[node name="Sprite2D" type="Sprite2D" parent="JumpPad2" unique_id=637376824]
+scale = Vector2(10.669208, 1.4347237)
+texture = ExtResource("1_2fi3q")
+
+[node name="Area2D" type="Area2D" parent="JumpPad2" unique_id=2102353931]
+collision_layer = 7
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JumpPad2/Area2D" unique_id=1300914748]
+position = Vector2(-12.936523, 2)
+scale = Vector2(1.0674391, 1)
+shape = SubResource("RectangleShape2D_uu4vj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JumpPad2" unique_id=1779547491]
+position = Vector2(-0.93652344, 11.5)
+scale = Vector2(1.0674391, 1)
+shape = SubResource("RectangleShape2D_uu4vj")
+
+[node name="JumpPad3" type="StaticBody2D" parent="." unique_id=1625854728]
+position = Vector2(10036, 770)
+scale = Vector2(0.27283427, 0.7673653)
+script = ExtResource("8_j1o2c")
+
+[node name="Sprite2D" type="Sprite2D" parent="JumpPad3" unique_id=469839319]
+scale = Vector2(10.669208, 1.4347237)
+texture = ExtResource("1_2fi3q")
+
+[node name="Area2D" type="Area2D" parent="JumpPad3" unique_id=434903650]
+collision_layer = 7
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JumpPad3/Area2D" unique_id=1383174676]
+position = Vector2(-12.936523, 2)
+scale = Vector2(1.0674391, 1)
+shape = SubResource("RectangleShape2D_uu4vj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JumpPad3" unique_id=197922559]
+position = Vector2(-0.93652344, 11.5)
+scale = Vector2(1.0674391, 1)
+shape = SubResource("RectangleShape2D_uu4vj")
+
+[node name="JumpPad4" type="StaticBody2D" parent="." unique_id=1293729213]
+position = Vector2(6346, 234.99998)
+scale = Vector2(0.27283427, 0.7673653)
+script = ExtResource("8_j1o2c")
+
+[node name="Sprite2D" type="Sprite2D" parent="JumpPad4" unique_id=1647189997]
+scale = Vector2(10.669208, 1.4347237)
+texture = ExtResource("1_2fi3q")
+
+[node name="Area2D" type="Area2D" parent="JumpPad4" unique_id=1114338777]
+collision_layer = 7
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JumpPad4/Area2D" unique_id=1684115491]
+position = Vector2(-12.936523, 2)
+scale = Vector2(1.0674391, 1)
+shape = SubResource("RectangleShape2D_uu4vj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JumpPad4" unique_id=5217971]
+position = Vector2(-0.93652344, 11.5)
+scale = Vector2(1.0674391, 1)
+shape = SubResource("RectangleShape2D_uu4vj")
+
+[node name="text" type="Control" parent="." unique_id=825358460]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="text" unique_id=2084759095]
+layout_mode = 0
+offset_left = 75.0
+offset_top = -220.0
+offset_right = 1178.0
+offset_bottom = 337.0
+theme_override_font_sizes/font_size = 75
+text = "arrow keys to move
+A and D control paddle
+Space to Jump
+Esc to Exit"
+
+[node name="Label2" type="Label" parent="text" unique_id=470386174]
+layout_mode = 0
+offset_left = 5724.0
+offset_top = -117.0
+offset_right = 7084.0
+offset_bottom = -14.0
+theme_override_font_sizes/font_size = 75
+text = "WARNING: HIGHLY UNFINISHED AREA"
+
 [connection signal="area_entered" from="Floor" to="Floor" method="_on_area_entered"]
 [connection signal="area_entered" from="winarea" to="winarea" method="_on_area_entered"]
+[connection signal="body_entered" from="JumpPad/Area2D" to="JumpPad" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="JumpPad2/Area2D" to="JumpPad2" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="JumpPad3/Area2D" to="JumpPad3" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="JumpPad4/Area2D" to="JumpPad4" method="_on_area_2d_body_entered"]

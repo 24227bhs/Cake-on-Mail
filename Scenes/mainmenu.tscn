@@ -1,6 +1,12 @@
 [gd_scene format=3 uid="uid://dvwh1ks5tnqo0"]
 
 [ext_resource type="Script" uid="uid://cboky5uqy1i25" path="res://script/mainmenu.gd" id="1_pposm"]
+[ext_resource type="Script" uid="uid://32pghgvuhgce" path="res://script/playtestdisclaimer.gd" id="2_web8u"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rtnl3"]
+line_spacing = 4.0
+paragraph_spacing = 10.0
+font_size = 14
 
 [node name="mainmenu" type="Control" unique_id=2088555098]
 layout_mode = 3
@@ -47,5 +53,78 @@ offset_bottom = 232.0
 theme_override_font_sizes/font_size = 160
 text = "GAME!!!!!"
 
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=2004459074]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ScrollContainer" unique_id=1734316632]
+layout_mode = 2
+text = "hihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihi"
+
+[node name="Button" type="Button" parent="ScrollContainer" unique_id=1432994665]
+layout_mode = 2
+
+[node name="disclaimer" type="Control" parent="." unique_id=1264166573]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_web8u")
+
+[node name="ColorRect" type="ColorRect" parent="disclaimer" unique_id=1694706149]
+layout_mode = 0
+offset_left = -28.999985
+offset_top = -36.0
+offset_right = 11.000015
+offset_bottom = 4.0
+scale = Vector2(30.3487, 17.683437)
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="disclaimer" unique_id=2099790916]
+layout_mode = 0
+offset_left = 359.0
+offset_top = 7.0
+offset_right = 741.0
+offset_bottom = 622.0
+scale = Vector2(1, 0.8793468)
+text = "Hello! It is I game developer,
+ here to give you a DISCLAIMER to my playtesters.
+ THIS IS NOT THE FINISHED GAME. 
+This game acts as a simple milestone
+there WILL BE BUGS and many I know.
+Sometimes physics is unruly...
+theres Many Incomplete Features
+and 100% broken features!
+Theres just one level right now..
+Just a test one.
+However, your goal is to tell me
+how much you like(or dont like)
+this game, add details, feedback
+stuff you'd think would be good!
+So by clicking Accept
+You acknowledge the fact that this game
+Is in a playtesting phase, and isn't complete."
+label_settings = SubResource("LabelSettings_rtnl3")
+horizontal_alignment = 1
+justification_flags = 235
+
+[node name="accept" type="Button" parent="disclaimer" unique_id=1573124436]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 533.0
+offset_right = 467.0
+offset_bottom = 564.0
+text = "Accept"
+
+[node name="deny" type="Button" parent="disclaimer" unique_id=765551101]
+layout_mode = 0
+offset_left = 639.0
+offset_top = 533.0
+offset_right = 699.0
+offset_bottom = 564.0
+text = "Deny"
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="disclaimer/accept" to="disclaimer" method="_on_accept_pressed"]
+[connection signal="pressed" from="disclaimer/deny" to="disclaimer" method="_on_deny_pressed"]

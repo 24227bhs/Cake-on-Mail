@@ -12,7 +12,7 @@ size = Vector2(131, 128)
 size = Vector2(132.5223, 126)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fkybt"]
-size = Vector2(121, 20)
+size = Vector2(132, 133)
 
 [node name="player" type="CharacterBody2D" unique_id=1502902567]
 collision_layer = 2
@@ -33,22 +33,26 @@ shape = SubResource("RectangleShape2D_osoa5")
 zoom = Vector2(0.5, 0.5)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1130717556]
-position = Vector2(155.99997, 16)
+position = Vector2(0, 9.536743e-07)
 rotation = 3.141924
-scale = Vector2(0.9646161, -0.33326992)
+scale = Vector2(0.8572232, 0.13757913)
 collision_layer = 2
 collision_mask = 7
 script = ExtResource("3_fkybt")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=570195077]
+position = Vector2(-197.69334, 6.8380575)
+scale = Vector2(1.1765031, -0.45460975)
 texture = ExtResource("2_vgqql")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1931068373]
+position = Vector2(-197.69334, 6.8380575)
+scale = Vector2(1.1765031, -0.45460975)
 shape = SubResource("RectangleShape2D_2fi3q")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=546551559]
 script = ExtResource("4_vgqql")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=360597139]
-position = Vector2(-2, -59)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=360597139 groups=["cake"]]
+position = Vector2(-2, -2.5)
 shape = SubResource("RectangleShape2D_fkybt")

@@ -39,23 +39,31 @@ offset_bottom = 389.0
 layout_mode = 2
 
 [node name="Button" type="Button" parent="MarginContainer/HFlowContainer" unique_id=888845422]
+modulate = Color(1, 0, 0, 1)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
+disabled = true
 text = "Level 1"
 
 [node name="Button2" type="Button" parent="MarginContainer/HFlowContainer" unique_id=2075744442]
+modulate = Color(1, 0, 0, 1)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
+disabled = true
 text = "Level 2"
 
 [node name="Button3" type="Button" parent="MarginContainer/HFlowContainer" unique_id=1148850413]
+modulate = Color(1, 0, 0, 1)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
+disabled = true
 text = "Level 3"
 
 [node name="Button4" type="Button" parent="MarginContainer/HFlowContainer" unique_id=1315423696]
+modulate = Color(1, 0, 0, 1)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
+disabled = true
 text = "Level 4"
 
 [node name="Label" type="Label" parent="." unique_id=1887206755]
