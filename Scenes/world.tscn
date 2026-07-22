@@ -420,6 +420,33 @@ texture = ExtResource("2_5v1tr")
 position = Vector2(2.1957703, -3)
 shape = SubResource("RectangleShape2D_2fi3q")
 
+[node name="StaticBody2D17" type="StaticBody2D" parent="level" unique_id=1889936675]
+position = Vector2(4908.0005, -274)
+rotation = 3.1415927
+scale = Vector2(15.650064, -0.9599709)
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="level/StaticBody2D17" unique_id=374294656]
+position = Vector2(-1.7111206, -6)
+texture = ExtResource("2_5v1tr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="level/StaticBody2D17" unique_id=350881384]
+position = Vector2(-0.85553646, -10.999992)
+shape = SubResource("RectangleShape2D_2fi3q")
+
+[node name="StaticBody2D18" type="StaticBody2D" parent="level" unique_id=340958041]
+position = Vector2(4290, 296)
+scale = Vector2(12.09539, 0.23323424)
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="level/StaticBody2D18" unique_id=1891638560]
+position = Vector2(1.4638519, -1)
+texture = ExtResource("2_5v1tr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="level/StaticBody2D18" unique_id=2008211132]
+position = Vector2(2.1957703, -3)
+shape = SubResource("RectangleShape2D_2fi3q")
+
 [node name="the cake" parent="." unique_id=127461938 instance=ExtResource("4_ikia7")]
 position = Vector2(113.00001, 60.00001)
 
@@ -459,7 +486,7 @@ libraries/ = SubResource("AnimationLibrary_adb80")
 autoplay = &"test"
 
 [node name="AnimatableBody2D2" type="AnimatableBody2D" parent="." unique_id=349745989]
-position = Vector2(3678, -450)
+position = Vector2(3616, -331)
 scale = Vector2(4, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D2" unique_id=399660937]
