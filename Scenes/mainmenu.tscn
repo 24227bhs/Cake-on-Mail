@@ -30,14 +30,24 @@ layout_mode = 0
 offset_top = 250.0
 offset_right = 1152.0
 offset_bottom = 472.0
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 500
+theme_override_constants/margin_bottom = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=840028932]
 layout_mode = 2
+theme_override_constants/separation = 60
 
 [node name="play" type="Button" parent="MarginContainer/VBoxContainer" unique_id=888636922]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "PLAY"
+
+[node name="Level Select" type="Button" parent="MarginContainer/VBoxContainer" unique_id=581242974]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Level Select"
 
 [node name="quit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=944181948]
 layout_mode = 2
@@ -46,12 +56,12 @@ text = "QUIT"
 
 [node name="Label" type="Label" parent="." unique_id=1457028212]
 layout_mode = 0
-offset_left = 143.0
-offset_top = 1.0
-offset_right = 1035.0
-offset_bottom = 220.0
+offset_left = 238.0
+offset_top = 18.0
+offset_right = 1130.0
+offset_bottom = 237.0
 theme_override_font_sizes/font_size = 140
-text = "Cake On Mail"
+text = "Cakewalk"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=2004459074]
 layout_mode = 0
@@ -66,6 +76,7 @@ text = "hihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihi
 layout_mode = 2
 
 [node name="disclaimer" type="Control" parent="." unique_id=1264166573]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -95,8 +106,8 @@ there WILL BE BUGS and many I know.
 Sometimes physics is unruly...
 theres Many Incomplete Features
 and 100% broken features!
-Theres just one level right now..
-Just a test one.
+Theres a couple levels right now..
+Mainly using Kenny Assets.
 However, your goal is to tell me
 how much you like(or dont like)
 this game, add details, feedback
@@ -125,6 +136,7 @@ offset_bottom = 564.0
 text = "Deny"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Level Select" to="." method="_on_level_select_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="disclaimer/accept" to="disclaimer" method="_on_accept_pressed"]
 [connection signal="pressed" from="disclaimer/deny" to="disclaimer" method="_on_deny_pressed"]
