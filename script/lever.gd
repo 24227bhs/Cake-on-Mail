@@ -11,7 +11,8 @@ func _process(delta: float) -> void:
 	pass
 
 #its uh broken (: plz fix )
-func _on_body_entered(body: CharacterBody2D) -> void:	
-		activated = true
-		latch.visible = false
-		collision.remove_child($"../Latch/CollisionShape2D")
+func _on_area_entered(body: Area2D) -> void:
+	print('working')
+	activated = true
+	latch.visible = false
+	collision.remove_child($"../Latch/CollisionShape2D")
