@@ -10,7 +10,6 @@ var activated = false
 func _process(delta: float) -> void:
 	pass
 
-#its uh broken (: plz fix )
 func _on_area_entered(body: Area2D) -> void:
 	print('working')
 	activated = true

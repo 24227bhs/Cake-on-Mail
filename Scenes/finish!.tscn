@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://c25y4bl0wittc"]
+
+[node name="finish!" type="CanvasLayer" unique_id=391617115]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1774041688]
+offset_left = 810.0
+offset_top = -10.0
+offset_right = 1987.0
+offset_bottom = 666.0
+scale = Vector2(0.36000013, 1)
+color = Color(0, 0.03137255, 0.12156863, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=489748744]
+layout_direction = 4
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -318.0
+offset_top = -301.0
+offset_right = -29.0
+offset_bottom = 79.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=803902799]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=968478891]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "LEVEL COMPLETE"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer" unique_id=195254435]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "level name"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2104029859]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "00:00.00"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="." unique_id=116725709]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=1331480211]
+offset_left = 832.0
+offset_top = 394.0
+offset_right = 1432.0
+offset_bottom = 794.0
+
+[node name="HFlowContainer" type="VFlowContainer" parent="MarginContainer2" unique_id=1185667176]
+layout_mode = 2
+theme_override_constants/v_separation = 35
+
+[node name="Button" type="Button" parent="MarginContainer2/HFlowContainer" unique_id=1645982937]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Next Level"
+
+[node name="Button2" type="Button" parent="MarginContainer2/HFlowContainer" unique_id=2040123510]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Main Menu"
+
+[node name="Label5" type="Label" parent="." unique_id=1969326571]
+offset_left = 479.0
+offset_top = 402.0
+offset_right = 622.0
+offset_bottom = 425.0
+text = "drawing goes here"
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1072922942]
+z_index = -1
+offset_left = -260.0
+offset_top = 1341.0
+offset_right = -220.0
+offset_bottom = 1381.0
+scale = Vector2(50.001945, -54.52562)
+color = Color(0.52875173, 0.8444401, 0.7948121, 1)
