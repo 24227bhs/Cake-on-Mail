@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bxxj207hfr5er" path="res://icon.svg" id="1_2fi3q"]
 [ext_resource type="PackedScene" uid="uid://5xn5hk1m0qmi" path="res://Scenes/player.tscn" id="1_7y40j"]
+[ext_resource type="PackedScene" uid="uid://c25y4bl0wittc" path="res://Scenes/finish!.tscn" id="2_j1o2c"]
 [ext_resource type="Script" uid="uid://cw1hnpdkhpc2n" path="res://script/floor.gd" id="4_7y40j"]
 [ext_resource type="PackedScene" uid="uid://b0vh7v10mcf1t" path="res://Scenes/the_cake.tscn" id="4_406xi"]
 [ext_resource type="PackedScene" uid="uid://cxnc5p4tw3bur" path="res://Scenes/speedrun_timer.tscn" id="5_406xi"]
@@ -174,6 +175,10 @@ size = Vector2(1362.2593, 165)
 
 [node name="player" parent="." unique_id=1502902567 instance=ExtResource("1_7y40j")]
 position = Vector2(0, 252)
+
+[node name="finish!" parent="player" unique_id=391617115 instance=ExtResource("2_j1o2c")]
+
+[node name="speedrun timer" parent="player" unique_id=383710765 instance=ExtResource("5_406xi")]
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=2058453743]
 position = Vector2(-2368, -49)
@@ -383,8 +388,6 @@ shape = SubResource("RectangleShape2D_2fi3q")
 
 [node name="the cake" parent="." unique_id=127461938 instance=ExtResource("4_406xi")]
 position = Vector2(113.00001, 60.00001)
-
-[node name="speedrun timer" parent="." unique_id=383710765 instance=ExtResource("5_406xi")]
 
 [node name="winarea" type="Area2D" parent="." unique_id=1425614094]
 z_index = 1
