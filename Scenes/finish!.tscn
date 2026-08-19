@@ -42,6 +42,7 @@ text = "level name"
 horizontal_alignment = 1
 
 [node name="Label3" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2104029859]
+visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 35
 text = "00:00.00"

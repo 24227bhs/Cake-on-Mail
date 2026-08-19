@@ -177,8 +177,10 @@ size = Vector2(1362.2593, 165)
 position = Vector2(0, 252)
 
 [node name="finish!" parent="player" unique_id=391617115 instance=ExtResource("2_j1o2c")]
+visible = false
 
 [node name="speedrun timer" parent="player" unique_id=383710765 instance=ExtResource("5_406xi")]
+layer = 2
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=2058453743]
 position = Vector2(-2368, -49)
@@ -389,17 +391,17 @@ shape = SubResource("RectangleShape2D_2fi3q")
 [node name="the cake" parent="." unique_id=127461938 instance=ExtResource("4_406xi")]
 position = Vector2(113.00001, 60.00001)
 
-[node name="winarea" type="Area2D" parent="." unique_id=1425614094]
+[node name="win" type="Area2D" parent="." unique_id=1425614094]
 z_index = 1
-position = Vector2(12131, 5.9999847)
+position = Vector2(371, 32.999996)
 scale = Vector2(0.7420397, 5.0855827)
 script = ExtResource("6_4qivd")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="winarea" unique_id=1851624288]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="win" unique_id=1851624288]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_yjjqr")
 
-[node name="Sprite2D" type="Sprite2D" parent="winarea" unique_id=204037901]
+[node name="Sprite2D" type="Sprite2D" parent="win" unique_id=204037901]
 modulate = Color(1, 0, 1, 1)
 position = Vector2(9.433457, 1.37644)
 texture = ExtResource("1_2fi3q")
@@ -572,7 +574,7 @@ theme_override_font_sizes/font_size = 75
 text = "WARNING: HIGHLY UNFINISHED AREA"
 
 [connection signal="area_entered" from="Floor" to="Floor" method="_on_area_entered"]
-[connection signal="area_entered" from="winarea" to="winarea" method="_on_area_entered"]
+[connection signal="area_entered" from="win" to="win" method="_on_area_entered"]
 [connection signal="body_entered" from="JumpPad/Area2D" to="JumpPad" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="JumpPad2/Area2D" to="JumpPad2" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="JumpPad3/Area2D" to="JumpPad3" method="_on_area_2d_body_entered"]
