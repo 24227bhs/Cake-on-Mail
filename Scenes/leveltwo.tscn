@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://5xn5hk1m0qmi" path="res://Scenes/player.tscn" id="7_lh66k"]
 [ext_resource type="PackedScene" uid="uid://cxnc5p4tw3bur" path="res://Scenes/speedrun_timer.tscn" id="8_hndhw"]
 [ext_resource type="PackedScene" uid="uid://b0vh7v10mcf1t" path="res://Scenes/the_cake.tscn" id="9_h8qve"]
+[ext_resource type="PackedScene" uid="uid://c25y4bl0wittc" path="res://Scenes/finish!.tscn" id="9_jocm8"]
 [ext_resource type="Script" uid="uid://bhulrwaxult6u" path="res://script/win.gd" id="10_foor1"]
 [ext_resource type="Script" uid="uid://dnp0lg7kgffrn" path="res://script/buttons.gd" id="11_p32wa"]
 [ext_resource type="Script" uid="uid://ctgqqenbkp88" path="res://script/lever.gd" id="12_5o320"]
@@ -858,6 +859,9 @@ tile_set = SubResource("TileSet_8gbba")
 position = Vector2(-891, -723)
 
 [node name="speedrun timer" parent="player" unique_id=383710765 instance=ExtResource("8_hndhw")]
+
+[node name="finish!" parent="player" unique_id=391617115 instance=ExtResource("9_jocm8")]
+visible = false
 
 [node name="the cake" parent="." unique_id=127461938 instance=ExtResource("9_h8qve")]
 position = Vector2(1243.0001, -1571)
