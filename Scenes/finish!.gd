@@ -14,3 +14,13 @@ func _process(delta: float) -> void:
 	testlabel.text = "the code can work"
 	wawa.text = str(testlabel.text)
 	leveltext.text = name
+	
+	
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/levelselect.tscn")
+
+
+func _on_button_2_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/mainmenu.tscn")

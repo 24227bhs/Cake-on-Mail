@@ -1606,7 +1606,7 @@ sources/5 = SubResource("TileSetAtlasSource_s0cu5")
 sources/0 = SubResource("TileSetAtlasSource_0l7su")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hptm8"]
-size = Vector2(266.8479, 44.787502)
+size = Vector2(208.6195, 34.232803)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h7jsb"]
 size = Vector2(101, 103)
@@ -1655,8 +1655,8 @@ scale = Vector2(0.7105689, 5.1203876)
 script = ExtResource("11_6jpyw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="winarea" unique_id=631235819]
-position = Vector2(1010.02905, -200.731)
-rotation = 3.1415927
+position = Vector2(1043.1013, -194.96973)
+rotation = -3.1415925
 scale = Vector2(1.135943, -1.0916998)
 shape = SubResource("RectangleShape2D_hptm8")
 
