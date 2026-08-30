@@ -34,10 +34,10 @@ text = "Tutorial"
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1821518964]
 layout_mode = 0
-offset_left = 230.0
-offset_top = 330.0
-offset_right = 1269.0
-offset_bottom = 407.0
+offset_left = 311.0
+offset_top = 331.0
+offset_right = 1350.0
+offset_bottom = 408.0
 
 [node name="HFlowContainer" type="HFlowContainer" parent="MarginContainer" unique_id=318163588]
 layout_mode = 2
@@ -53,18 +53,9 @@ theme_override_font_sizes/font_size = 50
 text = "Level 2"
 
 [node name="Button3" type="Button" parent="MarginContainer/HFlowContainer" unique_id=1148850413]
-modulate = Color(1, 0, 0, 1)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-disabled = true
 text = "Level 3"
-
-[node name="Button4" type="Button" parent="MarginContainer/HFlowContainer" unique_id=1315423696]
-modulate = Color(1, 0, 0, 1)
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-disabled = true
-text = "Level 4"
 
 [node name="Label" type="Label" parent="." unique_id=1887206755]
 layout_mode = 0
@@ -78,3 +69,4 @@ text = "LEVELS!!"
 [connection signal="pressed" from="testlevel" to="." method="_on_testlevel_pressed"]
 [connection signal="pressed" from="MarginContainer/HFlowContainer/levelone" to="." method="_on_levelone_pressed"]
 [connection signal="pressed" from="MarginContainer/HFlowContainer/leveltwo" to="." method="_on_leveltwo_pressed"]
+[connection signal="pressed" from="MarginContainer/HFlowContainer/Button3" to="." method="_on_button_3_pressed"]

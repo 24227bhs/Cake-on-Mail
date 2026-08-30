@@ -8,7 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://cv747fo6ywf8o" path="res://arttilesets/checkerfloormap.png" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://5xn5hk1m0qmi" path="res://Scenes/player.tscn" id="6_6bp64"]
 [ext_resource type="PackedScene" uid="uid://b0vh7v10mcf1t" path="res://Scenes/the_cake.tscn" id="7_344ge"]
+[ext_resource type="Script" uid="uid://dcb8s55x647s8" path="res://Scenes/finish!.gd" id="8_8mnmb"]
 [ext_resource type="PackedScene" uid="uid://cxnc5p4tw3bur" path="res://Scenes/speedrun_timer.tscn" id="8_70gml"]
+[ext_resource type="PackedScene" uid="uid://c25y4bl0wittc" path="res://Scenes/finish!.tscn" id="9_koko0"]
 [ext_resource type="Script" uid="uid://bhulrwaxult6u" path="res://script/win.gd" id="9_ynf5e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hptm8"]
@@ -799,6 +801,10 @@ tile_set = SubResource("TileSet_8gbba")
 
 [node name="player" parent="." unique_id=1502902567 instance=ExtResource("6_6bp64")]
 position = Vector2(-1000, -85)
+script = ExtResource("8_8mnmb")
+
+[node name="finish!" parent="player" unique_id=391617115 instance=ExtResource("9_koko0")]
+visible = false
 
 [node name="speedrun timer" parent="player" unique_id=383710765 instance=ExtResource("8_70gml")]
 

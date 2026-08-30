@@ -62,12 +62,12 @@ offset_bottom = 794.0
 layout_mode = 2
 theme_override_constants/v_separation = 35
 
-[node name="Button" type="Button" parent="MarginContainer2/HFlowContainer" unique_id=1645982937]
+[node name="Level Select" type="Button" parent="MarginContainer2/HFlowContainer" unique_id=1645982937]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Level Select"
 
-[node name="Button2" type="Button" parent="MarginContainer2/HFlowContainer" unique_id=2040123510]
+[node name="Main Menu" type="Button" parent="MarginContainer2/HFlowContainer" unique_id=2040123510]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Main Menu"
@@ -88,5 +88,5 @@ offset_bottom = 1381.0001
 scale = Vector2(50.001945, -54.52562)
 color = Color(0.53282315, 0.8211077, 0.9372026, 1)
 
-[connection signal="pressed" from="MarginContainer2/HFlowContainer/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="MarginContainer2/HFlowContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="MarginContainer2/HFlowContainer/Level Select" to="." method="_on_level_select_pressed"]
+[connection signal="pressed" from="MarginContainer2/HFlowContainer/Main Menu" to="." method="_on_main_menu_pressed"]
