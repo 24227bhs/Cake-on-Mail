@@ -23,15 +23,6 @@ offset_right = 1221.0
 offset_bottom = 679.0
 color = Color(0, 0.03137255, 0.12156863, 1)
 
-[node name="testlevel" type="Button" parent="." unique_id=1529050614]
-layout_mode = 0
-offset_left = 446.0
-offset_top = 203.0
-offset_right = 699.0
-offset_bottom = 301.0
-theme_override_font_sizes/font_size = 65
-text = "Tutorial"
-
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1821518964]
 layout_mode = 0
 offset_left = 311.0
@@ -66,7 +57,6 @@ offset_bottom = 234.0
 theme_override_font_sizes/font_size = 160
 text = "LEVELS!!"
 
-[connection signal="pressed" from="testlevel" to="." method="_on_testlevel_pressed"]
 [connection signal="pressed" from="MarginContainer/HFlowContainer/levelone" to="." method="_on_levelone_pressed"]
 [connection signal="pressed" from="MarginContainer/HFlowContainer/leveltwo" to="." method="_on_leveltwo_pressed"]
 [connection signal="pressed" from="MarginContainer/HFlowContainer/Button3" to="." method="_on_button_3_pressed"]

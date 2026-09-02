@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SkinResource" format=3 uid="uid://cg5ofmgevbvhs"]
+
+[ext_resource type="Script" uid="uid://uh88jbyaf8xx" path="res://script/SkinResource.gd" id="1_u4ykg"]
+[ext_resource type="Texture2D" uid="uid://vdjfkwng4qvk" path="res://skins/glitchedderg.png" id="2_m4gfj"]
+
+[resource]
+script = ExtResource("1_u4ykg")
+skin_name = "Glitched"
+sprite_sheet = ExtResource("2_m4gfj")
+metadata/_custom_type_script = "uid://uh88jbyaf8xx"

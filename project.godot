@@ -15,6 +15,15 @@ run/main_scene="uid://dvwh1ks5tnqo0"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SkinManager="*uid://dte5rvm7q5tqv"
+
+[display]
+
+window/size/mode=2
+window/stretch/mode="canvas_items"
+
 [global_group]
 
 cake=""
@@ -45,6 +54,7 @@ cake=""
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

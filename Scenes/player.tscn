@@ -21,9 +21,9 @@ platform_on_leave = 2
 script = ExtResource("1_6t5aa")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=74074667]
-modulate = Color(0.1254902, 0.42352942, 0, 1)
-scale = Vector2(1.0140887, 1)
+scale = Vector2(7.098, 7)
 texture = ExtResource("2_vgqql")
+hframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1653726206]
 position = Vector2(-1.5, 0)

@@ -10,8 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://b0vh7v10mcf1t" path="res://Scenes/the_cake.tscn" id="7_344ge"]
 [ext_resource type="Script" uid="uid://dcb8s55x647s8" path="res://Scenes/finish!.gd" id="8_8mnmb"]
 [ext_resource type="PackedScene" uid="uid://cxnc5p4tw3bur" path="res://Scenes/speedrun_timer.tscn" id="8_70gml"]
-[ext_resource type="PackedScene" uid="uid://c25y4bl0wittc" path="res://Scenes/finish!.tscn" id="9_koko0"]
 [ext_resource type="Script" uid="uid://bhulrwaxult6u" path="res://script/win.gd" id="9_ynf5e"]
+[ext_resource type="PackedScene" uid="uid://c1ltkwv0j1bqd" path="res://Scenes/skin_menu.tscn" id="10_8mnmb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hptm8"]
 texture = ExtResource("1_344ge")
@@ -800,11 +800,8 @@ tile_map_data = PackedByteArray("AAAFAP//BAAFAAYAAAAGAP//BAAFAAYAAAAHAP//BAAFAAY
 tile_set = SubResource("TileSet_8gbba")
 
 [node name="player" parent="." unique_id=1502902567 instance=ExtResource("6_6bp64")]
-position = Vector2(-1000, -85)
+position = Vector2(239, -922)
 script = ExtResource("8_8mnmb")
-
-[node name="finish!" parent="player" unique_id=391617115 instance=ExtResource("9_koko0")]
-visible = false
 
 [node name="speedrun timer" parent="player" unique_id=383710765 instance=ExtResource("8_70gml")]
 
@@ -818,8 +815,10 @@ scale = Vector2(0.7420397, 5.0855827)
 script = ExtResource("9_ynf5e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="winarea" unique_id=631235819]
-position = Vector2(33.69092, 46.995594)
+position = Vector2(14.824007, 49.945107)
 scale = Vector2(-1.135943, 1.0916998)
 shape = SubResource("RectangleShape2D_hptm8")
+
+[node name="SkinMenu" parent="." unique_id=479807660 instance=ExtResource("10_8mnmb")]
 
 [connection signal="area_entered" from="winarea" to="winarea" method="_on_area_entered"]

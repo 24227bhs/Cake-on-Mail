@@ -1,9 +1,7 @@
-extends CanvasLayer
+extends Control
 @onready var testlabel = $Label5
 @onready var time = $MarginContainer/VBoxContainer/Label3
 @onready var wawa = $Label4
-@onready var leveltext = $MarginContainer/VBoxContainer/Label2
-@onready var stopwatch = $"../speedrun timer"
 @onready var GUI = $"."
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,10 +9,6 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	testlabel.text = "the code can work"
-	wawa.text = str(testlabel.text)
-	leveltext.text = name
 	
 	
 
@@ -26,3 +20,7 @@ func _on_level_select_pressed() -> void:
 
 func _on_main_menu_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/mainmenu.tscn")
+
+
+func _on_test_pressed() -> void:
+	print("hello")

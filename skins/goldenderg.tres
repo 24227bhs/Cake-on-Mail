@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SkinResource" format=3 uid="uid://c3gaemhbhj40m"]
+
+[ext_resource type="Script" uid="uid://uh88jbyaf8xx" path="res://script/SkinResource.gd" id="1_n5cf6"]
+[ext_resource type="Texture2D" uid="uid://c7qncm88itks6" path="res://skins/goldenderg.png" id="2_asd5r"]
+
+[resource]
+script = ExtResource("1_n5cf6")
+skin_name = "Golden"
+sprite_sheet = ExtResource("2_asd5r")
+metadata/_custom_type_script = "uid://uh88jbyaf8xx"

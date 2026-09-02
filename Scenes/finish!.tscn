@@ -2,10 +2,23 @@
 
 [ext_resource type="Script" uid="uid://dcb8s55x647s8" path="res://Scenes/finish!.gd" id="1_7r5g8"]
 
-[node name="finish!" type="CanvasLayer" unique_id=391617115]
+[node name="finish!" type="Control" unique_id=301513285]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_7r5g8")
 
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1072922942]
+z_index = -1
+layout_mode = 0
+offset_left = -251.00003
+offset_top = 1341.0001
+offset_right = -211.00003
+offset_bottom = 1381.0001
+scale = Vector2(50.001945, -54.52562)
+color = Color(0.53282315, 0.8211077, 0.9372026, 1)
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1774041688]
+layout_mode = 0
 offset_left = 810.0
 offset_top = -10.0
 offset_right = 1987.0
@@ -13,8 +26,30 @@ offset_bottom = 666.0
 scale = Vector2(0.36000013, 1)
 color = Color(0, 0.03137255, 0.12156863, 1)
 
+[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=1331480211]
+layout_mode = 0
+offset_left = 832.0
+offset_top = 394.0
+offset_right = 1432.0
+offset_bottom = 794.0
+
+[node name="HFlowContainer" type="VFlowContainer" parent="MarginContainer2" unique_id=1185667176]
+layout_mode = 2
+theme_override_constants/v_separation = 35
+
+[node name="Level Select" type="Button" parent="MarginContainer2/HFlowContainer" unique_id=1645982937]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Level Select"
+
+[node name="Main Menu" type="Button" parent="MarginContainer2/HFlowContainer" unique_id=2040123510]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Main Menu"
+
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=489748744]
 layout_direction = 4
+layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
@@ -48,45 +83,14 @@ theme_override_font_sizes/font_size = 35
 text = "00:00.00"
 horizontal_alignment = 1
 
-[node name="Label4" type="Label" parent="." unique_id=116725709]
-offset_right = 283.0
-offset_bottom = 141.0
-
-[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=1331480211]
-offset_left = 832.0
-offset_top = 394.0
-offset_right = 1432.0
-offset_bottom = 794.0
-
-[node name="HFlowContainer" type="VFlowContainer" parent="MarginContainer2" unique_id=1185667176]
-layout_mode = 2
-theme_override_constants/v_separation = 35
-
-[node name="Level Select" type="Button" parent="MarginContainer2/HFlowContainer" unique_id=1645982937]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "Level Select"
-
-[node name="Main Menu" type="Button" parent="MarginContainer2/HFlowContainer" unique_id=2040123510]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "Main Menu"
-
-[node name="Label5" type="Label" parent="." unique_id=1969326571]
-offset_left = 479.0
-offset_top = 402.0
-offset_right = 622.0
-offset_bottom = 425.0
-text = "drawing goes here"
-
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=1072922942]
-z_index = -1
-offset_left = -251.00003
-offset_top = 1341.0001
-offset_right = -211.00003
-offset_bottom = 1381.0001
-scale = Vector2(50.001945, -54.52562)
-color = Color(0.53282315, 0.8211077, 0.9372026, 1)
+[node name="Label" type="Label" parent="." unique_id=191910227]
+layout_mode = 0
+offset_left = 772.0
+offset_top = 37.0
+offset_right = 1151.0
+offset_bottom = 120.0
+theme_override_font_sizes/font_size = 60
+text = "LEVEL FINISH"
 
 [connection signal="pressed" from="MarginContainer2/HFlowContainer/Level Select" to="." method="_on_level_select_pressed"]
 [connection signal="pressed" from="MarginContainer2/HFlowContainer/Main Menu" to="." method="_on_main_menu_pressed"]

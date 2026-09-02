@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SkinResource" format=3 uid="uid://dpix6fmw6ly02"]
+
+[ext_resource type="Script" uid="uid://uh88jbyaf8xx" path="res://script/SkinResource.gd" id="1_8r53j"]
+[ext_resource type="Texture2D" uid="uid://bn0ag2glvv7e3" path="res://skins/coolhatderg.png" id="2_vktpa"]
+
+[resource]
+script = ExtResource("1_8r53j")
+skin_name = "Cool Hat"
+sprite_sheet = ExtResource("2_vktpa")
+metadata/_custom_type_script = "uid://uh88jbyaf8xx"

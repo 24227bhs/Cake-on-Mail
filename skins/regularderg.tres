@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SkinResource" format=3 uid="uid://diw8f5lxh71ci"]
+
+[ext_resource type="Script" uid="uid://uh88jbyaf8xx" path="res://script/SkinResource.gd" id="1_yafce"]
+[ext_resource type="Texture2D" uid="uid://c1w1v4djnxwir" path="res://skins/regularderg.png" id="2_8ln18"]
+
+[resource]
+script = ExtResource("1_yafce")
+sprite_sheet = ExtResource("2_8ln18")
+metadata/_custom_type_script = "uid://uh88jbyaf8xx"

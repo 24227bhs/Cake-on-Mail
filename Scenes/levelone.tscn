@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://5xn5hk1m0qmi" path="res://Scenes/player.tscn" id="7_1spwm"]
 [ext_resource type="PackedScene" uid="uid://cxnc5p4tw3bur" path="res://Scenes/speedrun_timer.tscn" id="8_qhtxx"]
 [ext_resource type="PackedScene" uid="uid://b0vh7v10mcf1t" path="res://Scenes/the_cake.tscn" id="9_d2ukf"]
-[ext_resource type="PackedScene" uid="uid://c25y4bl0wittc" path="res://Scenes/finish!.tscn" id="9_tvxwb"]
 [ext_resource type="Script" uid="uid://bhulrwaxult6u" path="res://script/win.gd" id="10_w2lcq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hptm8"]
@@ -821,9 +820,6 @@ tile_set = SubResource("TileSet_8gbba")
 [node name="player" parent="." unique_id=1502902567 instance=ExtResource("7_1spwm")]
 position = Vector2(-833, -1149)
 
-[node name="finish!" parent="player" unique_id=391617115 instance=ExtResource("9_tvxwb")]
-visible = false
-
 [node name="speedrun timer" parent="player" unique_id=383710765 instance=ExtResource("8_qhtxx")]
 
 [node name="the cake" parent="." unique_id=127461938 instance=ExtResource("9_d2ukf")]
@@ -839,5 +835,13 @@ script = ExtResource("10_w2lcq")
 position = Vector2(-689.9901, -40.310028)
 scale = Vector2(-1.135943, 1.0916998)
 shape = SubResource("RectangleShape2D_hptm8")
+
+[node name="Label" type="Label" parent="." unique_id=1643901880]
+offset_left = 1998.0
+offset_top = -1293.0
+offset_right = 2262.0
+offset_bottom = -1251.0
+theme_override_font_sizes/font_size = 30
+text = "put the cake here!"
 
 [connection signal="area_entered" from="winarea" to="winarea" method="_on_area_entered"]

@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://c1ltkwv0j1bqd"]
+
+[ext_resource type="Script" uid="uid://dn36ioy2m5ip7" path="res://script/skin_menu.gd" id="1_iwcj0"]
+
+[node name="SkinMenu" type="Control" unique_id=479807660]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iwcj0")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=759986084]
+layout_mode = 0
+offset_left = -14.0
+offset_top = -1.0
+offset_right = 1149.0
+offset_bottom = 662.0
+color = Color(0, 0.03137255, 0.12156863, 1)
+
+[node name="NextButton" type="Button" parent="." unique_id=377414192]
+layout_mode = 0
+offset_left = 889.0
+offset_top = 347.0
+offset_right = 934.0
+offset_bottom = 378.0
+text = "Next"
+
+[node name="PrevButton" type="Button" parent="." unique_id=816582737]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 326.0
+offset_right = 176.0
+offset_bottom = 357.0
+text = "Prev"
+
+[node name="SkinLabel" type="Label" parent="." unique_id=1294067746]
+layout_mode = 0
+offset_left = 529.0
+offset_top = 236.0
+offset_right = 569.0
+offset_bottom = 259.0
+text = "hihihi"
+
+[node name="Button" type="Button" parent="." unique_id=1512776645]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 567.0
+offset_right = 161.0
+offset_bottom = 631.0
+text = "back"
+
+[node name="PreviewSprite" type="Sprite2D" parent="." unique_id=1161692041]
+position = Vector2(550, 373)
+scale = Vector2(9, 9)
+hframes = 2
+
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="PrevButton" to="." method="_on_prev_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
